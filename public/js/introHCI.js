@@ -3,6 +3,7 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
 });
 
 /*
@@ -10,4 +11,11 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+	$(".likeBtn").click(sendClickToGA);
+	
+}
+
+
+function sendClickToGA(e){
+	ga("send", "event", "like", "click");
 }
